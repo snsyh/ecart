@@ -1,4 +1,4 @@
-class DisplayFlg < ActiveHash::Base
+class DisplayFlg < ActiveHashMain
   include ActiveHash::Enum
   include ActiveHash::Associations
   belongs_to :brand

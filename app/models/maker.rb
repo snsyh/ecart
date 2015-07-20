@@ -5,10 +5,9 @@ class Maker < ActiveRecord::Base
 
   validates :maker_code, presence: true, :length => {maximum: 10}
   validates :maker_name, presence: true, :length => {maximum: 20}
-  validates :capital_letter, presence: true, :length => {maximum: 1}, format: { with: /[A-Z]/ }
+  validates_with CapitalLetterValidator
   validates :display_flg_id, presence: true, inclusion: { in: DisplayFlg.array }
   validates :display_order, numericality: true
-
   def display_flg_name
     DisplayFlg::NAME[self.display_flg]
   end

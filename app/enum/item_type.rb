@@ -1,4 +1,4 @@
-class ItemType < ActiveHash::Base
+class ItemType < ActiveHashMain
   include ActiveHash::Enum
   
   self.data = [

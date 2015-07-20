@@ -1,4 +1,4 @@
-class IndivisuallyCalculateFlg < ActiveHash::Base
+class IndivisuallyCalculateFlg < ActiveHashMain
   include ActiveHash::Enum
   include ActiveHash::Associations
   belongs_to :delivery_method

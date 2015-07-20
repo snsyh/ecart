@@ -1,4 +1,4 @@
-class SaleFlg < ActiveHash::Base
+class SaleFlg < ActiveHashMain
   include ActiveHash::Enum
   include ActiveHash::Associations
   

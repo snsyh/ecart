@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'search/index'
+
   get 'dashboard' , to: 'dashboard#index'
 
   resources :delivery_methods

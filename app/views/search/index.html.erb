@@ -1,0 +1,12 @@
+<h1>Search#index</h1>
+
+<ul>
+<% @items.each do |item| %>
+<li>
+<%= item.item_name %>
+<%= item.brand.brand_name %>
+<%= item.maker.maker_name %>
+<%= item.delivery_method.delivery_method_name %>
+</li>
+<% end %>
+</ul>

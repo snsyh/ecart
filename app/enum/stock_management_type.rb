@@ -1,4 +1,4 @@
-class StockManagementType < ActiveHash::Base
+class StockManagementType < ActiveHashMain
   include ActiveHash::Enum
   
   self.data = [
