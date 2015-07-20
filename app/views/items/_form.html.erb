@@ -1,0 +1,147 @@
+<%= form_for(@item) do |f| %>
+<% if @item.errors.any? %>
+<div id="error_explanation">
+	<h2><%= pluralize(@item.errors.count, "error") %> prohibited this item from being saved:</h2>
+
+	<ul>
+		<% @item.errors.full_messages.each do |message| %>
+		<li>
+			<%= message %>
+		</li>
+		<% end %>
+	</ul>
+</div>
+<% end %>
+
+<div class="field">
+	<%= f.label :item_code %>
+	<%= f.text_field :item_code %>
+</div>
+<div class="field">
+	<%= f.label :item_name %>
+	<%= f.text_field :item_name %>
+</div>
+<div class="field">
+	<%= f.label :large_category_code %>
+	<%= f.text_field :large_category_code %>
+</div>
+<div class="field">
+	<%= f.label :middle_category_code %>
+	<%= f.text_field :middle_category_code %>
+</div>
+<div class="field">
+	<%= f.label :small_category_code %>
+	<%= f.text_field :small_category_code %>
+</div>
+<div class="field">
+	<%= f.label :sale_flg %>
+	<%= f.collection_radio_buttons(:sale_flg_id, SaleFlg.all, :id, :name) %>
+</div>
+<div class="field">
+	<%= f.label :item_type %>
+	<%= f.collection_radio_buttons(:item_type_id, ItemType.all, :id, :name) %>
+</div>
+<div class="field">
+	<%= f.label :delivery_method_code %>
+	<%= f.collection_radio_buttons(:delivery_method_code, DeliveryMethod.all, :id, :delivery_method_name) %>
+</div>
+<div class="field">
+	<%= f.label :stock_management_type %>
+	<%= f.collection_radio_buttons(:stock_management_type_id, StockManagementType.all, :id, :name) %>
+</div>
+<div class="field">
+	<%= f.label :sale_price %>
+	<%= f.number_field :sale_price %>
+</div>
+<div class="field">
+	<%= f.label :sale_stock_quantity %>
+	<%= f.number_field :sale_stock_quantity %>
+</div>
+<div class="field">
+	<%= f.label :oneshot_order_limit %>
+	<%= f.number_field :oneshot_order_limit %>
+</div>
+<div class="field">
+	<%= f.label :sale_datetime %>
+	<%= f.datetime_select :sale_datetime_from %><%= f.datetime_select :sale_datetime_to %>
+</div>
+<div class="field">
+	<%= f.label :reservation_price %>
+	<%= f.number_field :reservation_price %>
+</div>
+<div class="field">
+	<%= f.label :reservation_stock_quantity %>
+	<%= f.number_field :reservation_stock_quantity %>
+</div>
+<div class="field">
+	<%= f.label :oneshot_reservation_limit %>
+	<%= f.number_field :oneshot_reservation_limit %>
+</div>
+<div class="field">
+	<%= f.label :reservation_datetime %>
+	<%= f.datetime_select :reservation_datetime_from %><%= f.datetime_select :reservation_datetime_to %>
+</div>
+<div class="field">
+	<%= f.label :discount_price %>
+	<%= f.number_field :discount_price %>
+</div>
+<div class="field">
+	<%= f.label :discount_datetime %>
+	<%= f.datetime_select :discount_datetime_from %><%= f.datetime_select :discount_datetime_to %>
+</div>
+<div class="field">
+	<%= f.label :color_code %>
+	<%= f.text_field :color_code %>
+</div>
+<div class="field">
+	<%= f.label :size_code %>
+	<%= f.text_field :size_code %>
+</div>
+<div class="field">
+	<%= f.label :jan_code %>
+	<%= f.text_field :jan_code %>
+</div>
+<div class="field">
+	<%= f.label :brand_code %>
+	<%= f.collection_select :brand_code, Brand.all, :id, :brand_name, :include_blank => true %>
+</div>
+<div class="field">
+	<%= f.label :maker_code %>
+	<%= f.collection_select :maker_code, Maker.all, :id, :maker_name, :include_blank => true %>
+</div>
+<div class="field">
+	<%= f.label :picking_days %>
+	<%= f.number_field :picking_days %>
+</div>
+<div class="field">
+	<%= f.label :release_date %>
+	<%= f.date_select :release_date %>
+</div>
+<div class="field">
+	<%= f.label :targeted_date_comment %>
+	<%= f.text_field :targeted_date_comment %>
+</div>
+<div class="field">
+	<%= f.label :shipping_time_comment %>
+	<%= f.text_field :shipping_time_comment %>
+</div>
+<div class="field">
+	<%= f.label :bank_wire %>
+	<%= f.collection_radio_buttons(:bank_wire, AvailableFlg.all, :id, :name) %>
+</div>
+<div class="field">
+	<%= f.label :cash_on_delivery %>
+	<%= f.collection_radio_buttons(:cash_on_delivery, AvailableFlg.all, :id, :name) %>
+</div>
+<div class="field">
+	<%= f.label :credit_card %>
+	<%= f.collection_radio_buttons(:credit_card, AvailableFlg.all, :id, :name) %>
+</div>
+<div class="field">
+	<%= f.label :convenience %>
+	<%= f.collection_radio_buttons(:convenience, AvailableFlg.all, :id, :name) %>
+</div>
+<div class="actions">
+	<%= f.submit %>
+</div>
+<% end %>

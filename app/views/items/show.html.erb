@@ -1,0 +1,184 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Item code:</strong>
+  <%= @item.item_code %>
+</p>
+
+<p>
+  <strong>Item name:</strong>
+  <%= @item.item_name %>
+</p>
+
+<p>
+  <strong>Large category code:</strong>
+  <%= @item.large_category_code %>
+</p>
+
+<p>
+  <strong>Middle category code:</strong>
+  <%= @item.middle_category_code %>
+</p>
+
+<p>
+  <strong>Small category code:</strong>
+  <%= @item.small_category_code %>
+</p>
+
+<p>
+  <strong>Sale flg:</strong>
+  <%= @item.sale_flg.name %>
+</p>
+
+<p>
+  <strong>Item type:</strong>
+  <%= @item.item_type.name %>
+</p>
+
+<p>
+  <strong>Delivery method code:</strong>
+  <%= @item.delivery_method_code %>
+</p>
+
+<p>
+  <strong>Stock management type:</strong>
+  <%= @item.stock_management_type.name %>
+</p>
+
+<p>
+  <strong>Sale price:</strong>
+  <%= @item.sale_price %>
+</p>
+
+<p>
+  <strong>Sale stock quantity:</strong>
+  <%= @item.sale_stock_quantity %>
+</p>
+
+<p>
+  <strong>Oneshot order limit:</strong>
+  <%= @item.oneshot_order_limit %>
+</p>
+
+<p>
+  <strong>Sale datetime from:</strong>
+  <%= @item.sale_datetime_from %>
+</p>
+
+<p>
+  <strong>Sale datetime to:</strong>
+  <%= @item.sale_datetime_to %>
+</p>
+
+<p>
+  <strong>Reservation price:</strong>
+  <%= @item.reservation_price %>
+</p>
+
+<p>
+  <strong>Reservation stock quantity:</strong>
+  <%= @item.reservation_stock_quantity %>
+</p>
+
+<p>
+  <strong>Oneshot reservation limit:</strong>
+  <%= @item.oneshot_reservation_limit %>
+</p>
+
+<p>
+  <strong>Reservation datetime from:</strong>
+  <%= @item.reservation_datetime_from %>
+</p>
+
+<p>
+  <strong>Reservation datetime to:</strong>
+  <%= @item.reservation_datetime_to %>
+</p>
+
+<p>
+  <strong>Discount price:</strong>
+  <%= @item.discount_price %>
+</p>
+
+<p>
+  <strong>Discount datetime from:</strong>
+  <%= @item.discount_datetime_from %>
+</p>
+
+<p>
+  <strong>Discount datetime to:</strong>
+  <%= @item.discount_datetime_to %>
+</p>
+
+<p>
+  <strong>Color code:</strong>
+  <%= @item.color_code %>
+</p>
+
+<p>
+  <strong>Size code:</strong>
+  <%= @item.size_code %>
+</p>
+
+<p>
+  <strong>Jan code:</strong>
+  <%= @item.jan_code %>
+</p>
+
+<p>
+  <strong>Brand code:</strong>
+  <%= @item.brand_code %>
+</p>
+
+<p>
+  <strong>Maker code:</strong>
+  <%= @item.maker_code %>
+</p>
+
+<p>
+  <strong>Picking days:</strong>
+  <%= @item.picking_days %>
+</p>
+
+<p>
+  <strong>Release date:</strong>
+  <%= @item.release_date %>
+</p>
+
+<p>
+  <strong>Targeted date comment:</strong>
+  <%= @item.targeted_date_comment %>
+</p>
+
+<p>
+  <strong>Shipping time comment:</strong>
+  <%= @item.shipping_time_comment %>
+</p>
+
+<p>
+  <strong>Bank wire:</strong>
+  <%= @item.bank_wire %>
+</p>
+
+<p>
+  <strong>Cash on delivery:</strong>
+  <%= @item.cash_on_delivery %>
+</p>
+
+<p>
+  <strong>Credit card:</strong>
+  <%= @item.credit_card %>
+</p>
+
+<p>
+  <strong>Convenience:</strong>
+  <%= @item.convenience %>
+</p>
+
+<p>
+  <strong>Average review score:</strong>
+  <%= @item.average_review_score %>
+</p>
+
+<%= link_to 'Edit', edit_item_path(@item) %> |
+<%= link_to 'Back', items_path %>

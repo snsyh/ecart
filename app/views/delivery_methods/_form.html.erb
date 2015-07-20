@@ -1,0 +1,33 @@
+<%= form_for(@delivery_method) do |f| %>
+  <% if @delivery_method.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@delivery_method.errors.count, "error") %> prohibited this delivery_method from being saved:</h2>
+
+      <ul>
+      <% @delivery_method.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :delivery_method_code %><br>
+    <%= f.text_field :delivery_method_code %>
+  </div>
+  <div class="field">
+    <%= f.label :delivery_method_name %><br>
+    <%= f.text_field :delivery_method_name %>
+  </div>
+  <div class="field">
+    <%= f.label :shipping_charge_threshold_prices %><br>
+    <%= f.number_field :shipping_charge_threshold_prices %>
+  </div>
+  <div class="field">
+    <%= f.label :indivisually_calculate_flg %><br>
+	<%= f.collection_radio_buttons(:indivisually_calculate_flg_id, IndivisuallyCalculateFlg.all, :id, :name) %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

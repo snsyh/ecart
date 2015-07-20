@@ -1,0 +1,89 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  item_code: MyString
+  item_name: MyString
+  large_category_code: MyString
+  middle_category_code: MyString
+  small_category_code: MyString
+  sale_flg: 1
+  item_status: 1
+  delivery_method_code: MyString
+  stock_management_type: 1
+  sale_price: 1
+  sale_stock_quantity: 1
+  oneshot_order_limit: 1
+  sale_datetime: MyString
+  _from: 2015-07-19 06:44:21
+  sale_datetime: MyString
+  _to: 2015-07-19 06:44:21
+  reservation_price: 1
+  reservation_stock_quantity: 1
+  oneshot_reservation_limit: 1
+  reservation_datetime: MyString
+  _from: 2015-07-19 06:44:21
+  reservation_datetime: MyString
+  _to: 2015-07-19 06:44:21
+  discount_price: 1
+  discount_datetime: MyString
+  _from: 2015-07-19 06:44:21
+  discount_datetime: MyString
+  _to: 2015-07-19 06:44:21
+  color_code: MyString
+  size_code: MyString
+  jan_code: MyString
+  brand_code: MyString
+  maker_code: MyString
+  picking_days: 1
+  release_date: 2015-07-19
+  targeted_date_comment: MyString
+  shipping_time_comment: MyString
+  bank_wire: 1
+  cash_on_delivery: 1
+  credit_card: 1
+  convenience: 1
+  average_review_score: 1
+
+two:
+  item_code: MyString
+  item_name: MyString
+  large_category_code: MyString
+  middle_category_code: MyString
+  small_category_code: MyString
+  sale_flg: 1
+  item_status: 1
+  delivery_method_code: MyString
+  stock_management_type: 1
+  sale_price: 1
+  sale_stock_quantity: 1
+  oneshot_order_limit: 1
+  sale_datetime: MyString
+  _from: 2015-07-19 06:44:21
+  sale_datetime: MyString
+  _to: 2015-07-19 06:44:21
+  reservation_price: 1
+  reservation_stock_quantity: 1
+  oneshot_reservation_limit: 1
+  reservation_datetime: MyString
+  _from: 2015-07-19 06:44:21
+  reservation_datetime: MyString
+  _to: 2015-07-19 06:44:21
+  discount_price: 1
+  discount_datetime: MyString
+  _from: 2015-07-19 06:44:21
+  discount_datetime: MyString
+  _to: 2015-07-19 06:44:21
+  color_code: MyString
+  size_code: MyString
+  jan_code: MyString
+  brand_code: MyString
+  maker_code: MyString
+  picking_days: 1
+  release_date: 2015-07-19
+  targeted_date_comment: MyString
+  shipping_time_comment: MyString
+  bank_wire: 1
+  cash_on_delivery: 1
+  credit_card: 1
+  convenience: 1
+  average_review_score: 1

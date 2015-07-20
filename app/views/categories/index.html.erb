@@ -1,0 +1,37 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Categories</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Large category code</th>
+      <th>Middle category code</th>
+      <th>Small category code</th>
+      <th>Large category name</th>
+      <th>Middle category name</th>
+      <th>Small category name</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @categories.each do |category| %>
+      <tr>
+        <td><%= category.large_category_code %></td>
+        <td><%= category.middle_category_code %></td>
+        <td><%= category.small_category_code %></td>
+        <td><%= category.large_category_name %></td>
+        <td><%= category.middle_category_name %></td>
+        <td><%= category.small_category_name %></td>
+        <td><%= link_to 'Show', category %></td>
+        <td><%= link_to 'Edit', edit_category_path(category) %></td>
+        <td><%= link_to 'Destroy', category, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Category', new_category_path %>

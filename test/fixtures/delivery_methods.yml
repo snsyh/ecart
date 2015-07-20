@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  delivery_method_code: MyString
+  delivery_method_name: MyString
+  shipping_charge_threshold_prices: 1
+  indivisually_calicurate_flg: 1
+
+two:
+  delivery_method_code: MyString
+  delivery_method_name: MyString
+  shipping_charge_threshold_prices: 1
+  indivisually_calicurate_flg: 1

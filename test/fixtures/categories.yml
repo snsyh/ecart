@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  large_category_code: MyString
+  middle_category_code: MyString
+  small_category_code: MyString
+  large_category_name: MyString
+  middle_category_name: MyString
+  small_category_name: MyString
+
+two:
+  large_category_code: MyString
+  middle_category_code: MyString
+  small_category_code: MyString
+  large_category_name: MyString
+  middle_category_name: MyString
+  small_category_name: MyString

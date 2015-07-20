@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Delivery method code:</strong>
+  <%= @delivery_method.delivery_method_code %>
+</p>
+
+<p>
+  <strong>Delivery method name:</strong>
+  <%= @delivery_method.delivery_method_name %>
+</p>
+
+<p>
+  <strong>Shipping charge threshold prices:</strong>
+  <%= @delivery_method.shipping_charge_threshold_prices %>
+</p>
+
+<p>
+  <strong>Indivisually calculate flg:</strong>
+  <%= @delivery_method.indivisually_calculate_flg.name %>
+</p>
+
+<%= link_to 'Edit', edit_delivery_method_path(@delivery_method) %> |
+<%= link_to 'Back', delivery_methods_path %>

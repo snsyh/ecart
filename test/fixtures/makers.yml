@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  maker_code: MyString
+  maker_name: MyString
+  capital_letter: MyString
+  display_flg: 1
+  display_order: 1
+
+two:
+  maker_code: MyString
+  maker_name: MyString
+  capital_letter: MyString
+  display_flg: 1
+  display_order: 1

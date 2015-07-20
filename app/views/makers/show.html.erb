@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Maker code:</strong>
+  <%= @maker.maker_code %>
+</p>
+
+<p>
+  <strong>Maker name:</strong>
+  <%= @maker.maker_name %>
+</p>
+
+<p>
+  <strong>Capital letter:</strong>
+  <%= @maker.capital_letter %>
+</p>
+
+<p>
+  <strong>Display flg:</strong>
+  <%= @maker.display_flg.name %>
+</p>
+
+<p>
+  <strong>Display order:</strong>
+  <%= @maker.display_order %>
+</p>
+
+<%= link_to 'Edit', edit_maker_path(@maker) %> |
+<%= link_to 'Back', makers_path %>
