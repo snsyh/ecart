@@ -3,7 +3,7 @@ class Brand < ActiveRecord::Base
   has_many :items
   belongs_to_active_hash :display_flg
 
-  validates :brand_code, presence: true, :length => {maximum: 10}
+  validates :brand_code, presence: true, uniqueness: true, :length => {maximum: 10}
   validates :brand_name, presence: true, :length => {maximum: 20}
   validates_with CapitalLetterValidator
   validates :display_flg_id, presence: true, inclusion: { in: DisplayFlg.array }

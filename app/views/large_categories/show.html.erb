@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Large category code:</strong>
+  <%= @large_category.large_category_code %>
+</p>
+
+<p>
+  <strong>Large category name:</strong>
+  <%= @large_category.large_category_name %>
+</p>
+
+<p>
+  <strong>Display order:</strong>
+  <%= @large_category.display_order %>
+</p>
+
+<%= link_to 'Edit', edit_large_category_path(@large_category) %> |
+<%= link_to 'Back', large_categories_path %>

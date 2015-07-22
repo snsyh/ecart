@@ -1,10 +1,12 @@
 class CreateItems < ActiveRecord::Migration
-  def change
+  def self.down
+    drop_table :items
+  end
+  
+  def self.up
     create_table :items do |t|
       t.string :item_code
       t.string :item_name
-      t.string :large_category_code
-      t.string :middle_category_code
       t.string :small_category_code
       t.integer :sale_flg_id
       t.integer :item_type_id

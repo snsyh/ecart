@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Middle category code:</strong>
+  <%= @middle_category.middle_category_code %>
+</p>
+
+<p>
+  <strong>Middle category name:</strong>
+  <%= @middle_category.middle_category_name %>
+</p>
+
+<p>
+  <strong>Display order:</strong>
+  <%= @middle_category.display_order %>
+</p>
+
+<%= link_to 'Edit', edit_middle_category_path(@middle_category) %> |
+<%= link_to 'Back', middle_categories_path %>

@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Large Categories</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Large category code</th>
+      <th>Large category name</th>
+      <th>Display order</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @large_categories.each do |large_category| %>
+      <tr>
+        <td><%= large_category.large_category_code %></td>
+        <td><%= large_category.large_category_name %></td>
+        <td><%= large_category.display_order %></td>
+        <td><%= link_to 'Show', large_category %></td>
+        <td><%= link_to 'Edit', edit_large_category_path(large_category) %></td>
+        <td><%= link_to 'Destroy', large_category, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Large category', new_large_category_path %>

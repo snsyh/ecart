@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  small_category_code: MyString
+  smalle_category_name: MyString
+  display_order: 1
+
+two:
+  small_category_code: MyString
+  smalle_category_name: MyString
+  display_order: 1

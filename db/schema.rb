@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150719135915) do
+ActiveRecord::Schema.define(version: 20150722133923) do
 
   create_table "brands", force: :cascade do |t|
     t.string   "brand_code"
@@ -27,9 +27,6 @@ ActiveRecord::Schema.define(version: 20150719135915) do
     t.string   "large_category_code"
     t.string   "middle_category_code"
     t.string   "small_category_code"
-    t.string   "large_category_name"
-    t.string   "middle_category_name"
-    t.string   "small_category_name"
     t.datetime "created_at",           null: false
     t.datetime "updated_at",           null: false
   end
@@ -53,8 +50,6 @@ ActiveRecord::Schema.define(version: 20150719135915) do
   create_table "items", force: :cascade do |t|
     t.string   "item_code"
     t.string   "item_name"
-    t.string   "large_category_code"
-    t.string   "middle_category_code"
     t.string   "small_category_code"
     t.integer  "sale_flg_id"
     t.integer  "item_type_id"
@@ -91,6 +86,14 @@ ActiveRecord::Schema.define(version: 20150719135915) do
     t.datetime "updated_at",                 null: false
   end
 
+  create_table "large_categories", force: :cascade do |t|
+    t.string   "large_category_code"
+    t.string   "large_category_name"
+    t.integer  "display_order"
+    t.datetime "created_at",          null: false
+    t.datetime "updated_at",          null: false
+  end
+
   create_table "makers", force: :cascade do |t|
     t.string   "maker_code"
     t.string   "maker_name"
@@ -99,6 +102,22 @@ ActiveRecord::Schema.define(version: 20150719135915) do
     t.integer  "display_order"
     t.datetime "created_at",     null: false
     t.datetime "updated_at",     null: false
+  end
+
+  create_table "middle_categories", force: :cascade do |t|
+    t.string   "middle_category_code"
+    t.string   "middle_category_name"
+    t.integer  "display_order"
+    t.datetime "created_at",           null: false
+    t.datetime "updated_at",           null: false
+  end
+
+  create_table "small_categories", force: :cascade do |t|
+    t.string   "small_category_code"
+    t.string   "small_category_name"
+    t.integer  "display_order"
+    t.datetime "created_at",          null: false
+    t.datetime "updated_at",          null: false
   end
 
 end

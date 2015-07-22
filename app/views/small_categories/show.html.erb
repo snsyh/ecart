@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Small category code:</strong>
+  <%= @small_category.small_category_code %>
+</p>
+
+<p>
+  <strong>Smalle category name:</strong>
+  <%= @small_category.small_category_name %>
+</p>
+
+<p>
+  <strong>Display order:</strong>
+  <%= @small_category.display_order %>
+</p>
+
+<%= link_to 'Edit', edit_small_category_path(@small_category) %> |
+<%= link_to 'Back', small_categories_path %>

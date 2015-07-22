@@ -13,6 +13,17 @@
 </div>
 <% end %>
 
+<% @category.each do |c|  %>
+<%=c.large_category_code%>
+<%=c.middle_category_code%>
+<%=c.small_category_code%>
+<% end %>
+
+<div class="field">
+	<%= f.label :category %>
+	<%= f.collection_select(:small_category_code, SmallCategory.all, :id, :small_category_name, :include_blank => true) %>
+</div>
+
 <div class="field">
 	<%= f.label :item_code %>
 	<%= f.text_field :item_code %>
@@ -20,18 +31,6 @@
 <div class="field">
 	<%= f.label :item_name %>
 	<%= f.text_field :item_name %>
-</div>
-<div class="field">
-	<%= f.label :large_category_code %>
-	<%= f.text_field :large_category_code %>
-</div>
-<div class="field">
-	<%= f.label :middle_category_code %>
-	<%= f.text_field :middle_category_code %>
-</div>
-<div class="field">
-	<%= f.label :small_category_code %>
-	<%= f.text_field :small_category_code %>
 </div>
 <div class="field">
 	<%= f.label :sale_flg %>
@@ -63,7 +62,7 @@
 </div>
 <div class="field">
 	<%= f.label :sale_datetime %>
-	<%= f.datetime_select :sale_datetime_from %><%= f.datetime_select :sale_datetime_to %>
+	<%= f.datetime_select :sale_datetime_from, :include_blank => true %><%= f.datetime_select :sale_datetime_to, :include_blank => true %>
 </div>
 <div class="field">
 	<%= f.label :reservation_price %>
@@ -79,7 +78,7 @@
 </div>
 <div class="field">
 	<%= f.label :reservation_datetime %>
-	<%= f.datetime_select :reservation_datetime_from %><%= f.datetime_select :reservation_datetime_to %>
+	<%= f.datetime_select :reservation_datetime_from, :include_blank => true %><%= f.datetime_select :reservation_datetime_to, :include_blank => true %>
 </div>
 <div class="field">
 	<%= f.label :discount_price %>
@@ -87,7 +86,7 @@
 </div>
 <div class="field">
 	<%= f.label :discount_datetime %>
-	<%= f.datetime_select :discount_datetime_from %><%= f.datetime_select :discount_datetime_to %>
+	<%= f.datetime_select :discount_datetime_from, :include_blank => true %><%= f.datetime_select :discount_datetime_to, :include_blank => true %>
 </div>
 <div class="field">
 	<%= f.label :color_code %>
@@ -115,7 +114,7 @@
 </div>
 <div class="field">
 	<%= f.label :release_date %>
-	<%= f.date_select :release_date %>
+	<%= f.date_select :release_date, :include_blank => true %>
 </div>
 <div class="field">
 	<%= f.label :targeted_date_comment %>

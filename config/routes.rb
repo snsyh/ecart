@@ -1,4 +1,10 @@
 Rails.application.routes.draw do
+  resources :small_categories
+
+  resources :middle_categories
+
+  resources :large_categories
+
   get 'search/index'
 
   get 'dashboard' , to: 'dashboard#index'
