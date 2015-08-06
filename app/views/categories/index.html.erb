@@ -9,6 +9,7 @@
       <tr>
         <td><%= category.large_category_code %></td>
         <td><%= link_to category.large_category_name, edit_category_path(category) %></td>
+        <td><%= link_to category.large_category_name, "large_categories/#{category.large_category_code}/edit" %></td>
       </tr>
     <% end %>
   </tbody>
@@ -21,7 +22,7 @@
       <tr>
         <td><%= category.middle_category_code %></td>
         <td><%= category.large_category_code %></td>
-        <td><%= link_to category.middle_category_name, edit_category_path(category) %></td>
+        <td><%= link_to category.middle_category_name, "middle_categories/#{category.middle_category_code}/edit" %></td>
       </tr>
     <% end %>
   </tbody>
@@ -35,7 +36,7 @@
         <td><%= category.small_category_code %></td>
         <td><%= category.middle_category_code %></td>
         <td><%= category.large_category_code %></td>
-        <td><%= link_to category.small_category_name, edit_category_path(category) %></td>
+        <td><%= link_to category.small_category_name, "small_categories/#{category.small_category_code}/edit" %></td>
       </tr>
     <% end %>
   </tbody>

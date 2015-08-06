@@ -1,6 +1,5 @@
 class SmallCategoriesController < ApplicationController
   before_action :set_small_category, only: [:show, :edit, :update, :destroy]
-
   # GET /small_categories
   # GET /small_categories.json
   def index
@@ -14,11 +13,18 @@ class SmallCategoriesController < ApplicationController
 
   # GET /small_categories/new
   def new
-    @small_category = SmallCategory.new
+    if params[:small_category].present?
+      @small_category = SmallCategory.new
+      @middle_categories = MiddleCategory.belongs_to_select_category(params[:small_category])
+    else
+      @middle_categories = []
+      @small_category = SmallCategory.new
+    end
   end
 
   # GET /small_categories/1/edit
   def edit
+    @middle_categories = MiddleCategory.belongs_to_select_category(@small_category)
   end
 
   # POST /small_categories
@@ -62,13 +68,14 @@ class SmallCategoriesController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_small_category
-      @small_category = SmallCategory.find(params[:id])
-    end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
-    def small_category_params
-      params.require(:small_category).permit(:large_category_code, :middle_category_code, :small_category_code, :small_category_name, :display_order)
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_small_category
+    @small_category = SmallCategory.find(params[:id])
+  end
+
+  # Never trust parameters from the scary internet, only allow the white list through.
+  def small_category_params
+    params.require(:small_category).permit(:large_category_code, :middle_category_code, :small_category_code, :small_category_name, :display_order)
+  end
 end

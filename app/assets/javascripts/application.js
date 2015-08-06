@@ -14,3 +14,9 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+$(function(){
+    $('#small_category_large_category_code').change(function() {
+        $("form").attr('action', '/small_categories/new');
+        $("form").submit();
+    });
+});
