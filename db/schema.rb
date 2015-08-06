@@ -107,6 +107,7 @@ ActiveRecord::Schema.define(version: 20150722133923) do
   create_table "middle_categories", force: :cascade do |t|
     t.string   "middle_category_code"
     t.string   "middle_category_name"
+    t.string   "large_category_code"
     t.integer  "display_order"
     t.datetime "created_at",           null: false
     t.datetime "updated_at",           null: false
@@ -115,9 +116,11 @@ ActiveRecord::Schema.define(version: 20150722133923) do
   create_table "small_categories", force: :cascade do |t|
     t.string   "small_category_code"
     t.string   "small_category_name"
+    t.string   "large_category_code"
+    t.string   "middle_category_code"
     t.integer  "display_order"
-    t.datetime "created_at",          null: false
-    t.datetime "updated_at",          null: false
+    t.datetime "created_at",           null: false
+    t.datetime "updated_at",           null: false
   end
 
 end

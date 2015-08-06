@@ -69,6 +69,6 @@ class MiddleCategoriesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def middle_category_params
-      params.require(:middle_category).permit(:middle_category_code, :middle_category_name, :display_order)
+      params.require(:middle_category).permit(:large_category_code, :middle_category_code, :middle_category_name, :display_order)
     end
 end

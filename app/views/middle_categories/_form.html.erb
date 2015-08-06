@@ -12,6 +12,10 @@
   <% end %>
 
   <div class="field">
+    <%= f.label :large_category_code %><br>
+	<%= f.collection_select :large_category_code, LargeCategory.all, :large_category_code, :large_category_name, :include_blank => true %>
+  </div>
+  <div class="field">
     <%= f.label :middle_category_code %><br>
     <%= f.text_field :middle_category_code %>
   </div>

@@ -69,6 +69,6 @@ class SmallCategoriesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def small_category_params
-      params.require(:small_category).permit(:small_category_code, :smalle_category_name, :display_order)
+      params.require(:small_category).permit(:large_category_code, :middle_category_code, :small_category_code, :small_category_name, :display_order)
     end
 end

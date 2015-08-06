@@ -3,6 +3,7 @@ class CreateMiddleCategories < ActiveRecord::Migration
     create_table :middle_categories do |t|
       t.string :middle_category_code
       t.string :middle_category_name
+      t.string :large_category_code
       t.integer :display_order
 
       t.timestamps null: false
