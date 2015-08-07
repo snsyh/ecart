@@ -21,7 +21,7 @@
 <div class="field">
 	<%= f.label :middle_category_code %>
 	<br>
-	<%= f.collection_select :middle_category_code, MiddleCategory.all, :middle_category_code, :middle_category_name, :include_blank => true %>
+	<%= f.collection_select :middle_category_code, @middle_categories, :middle_category_code, :middle_category_name, :include_blank => true %>
 </div>
 <div class="field">
 	<%= f.label :small_category_code %>

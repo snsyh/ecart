@@ -13,12 +13,13 @@ class SmallCategoriesController < ApplicationController
 
   # GET /small_categories/new
   def new
-    if params[:small_category].present?
+    if params[:small_category].blank?
       @small_category = SmallCategory.new
-      @middle_categories = MiddleCategory.belongs_to_select_category(params[:small_category])
-    else
       @middle_categories = []
-      @small_category = SmallCategory.new
+    else
+      @req_category = params[:small_category]
+      @small_category = SmallCategory.new(:large_category_code => @req_category[:large_category_code], :middle_category_code => nil, :small_category_code => @req_category[:small_category_code], :small_category_name => @req_category[:small_category_name], :display_order => @req_category[:display_order])
+      @middle_categories = MiddleCategory.belongs_to_select_category(params[:small_category])
     end
   end
 
