@@ -4,7 +4,7 @@ class MiddleCategoriesController < ApplicationController
   # GET /middle_categories
   # GET /middle_categories.json
   def index
-    @middle_categories = MiddleCategory.all
+    @middle_categories = MiddleCategory.category_tree
   end
 
   # GET /middle_categories/1

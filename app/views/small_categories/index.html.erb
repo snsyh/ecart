@@ -5,6 +5,8 @@
 <table>
   <thead>
     <tr>
+      <th>Large category code</th>
+      <th>Middle category code</th>
       <th>Small category code</th>
       <th>Smalle category name</th>
       <th>Display order</th>
@@ -15,6 +17,8 @@
   <tbody>
     <% @small_categories.each do |small_category| %>
       <tr>
+        <td><%= small_category.large_category_code %></td>
+        <td><%= small_category.middle_category_code %></td>
         <td><%= small_category.small_category_code %></td>
         <td><%= small_category.small_category_name %></td>
         <td><%= small_category.display_order %></td>

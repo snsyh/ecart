@@ -3,7 +3,7 @@ class SmallCategoriesController < ApplicationController
   # GET /small_categories
   # GET /small_categories.json
   def index
-    @small_categories = SmallCategory.all
+    @small_categories = SmallCategory.category_tree
   end
 
   # GET /small_categories/1
@@ -18,7 +18,7 @@ class SmallCategoriesController < ApplicationController
       @middle_categories = []
     else
       @req_category = params[:small_category]
-      @small_category = SmallCategory.new(:large_category_code => @req_category[:large_category_code], :middle_category_code => nil, :small_category_code => @req_category[:small_category_code], :small_category_name => @req_category[:small_category_name], :display_order => @req_category[:display_order])
+      @small_category = SmallCategory.new(small_category_params)
       @middle_categories = MiddleCategory.belongs_to_select_category(params[:small_category])
     end
   end
@@ -32,6 +32,7 @@ class SmallCategoriesController < ApplicationController
   # POST /small_categories.json
   def create
     @small_category = SmallCategory.new(small_category_params)
+    @middle_categories = MiddleCategory.belongs_to_select_category(@small_category)
 
     respond_to do |format|
       if @small_category.save
