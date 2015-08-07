@@ -12,8 +12,17 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require jquery.turbolinks
 //= require turbolinks
+//= require jquery.treeview
 //= require_tree .
+$(function() {
+    $("#tree").treeview({
+        collapsed: false,
+        animated: "nomal"
+    });
+});
+
 $(function(){
     $('#small_category_large_category_code').change(function() {
         $("form").attr('action', '/small_categories/new');

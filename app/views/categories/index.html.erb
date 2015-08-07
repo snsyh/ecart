@@ -1,43 +1,44 @@
-<p id="notice"><%= notice %></p>
+<p id="notice">
+	<%= notice %>
+</p>
 
 <h1>Listing Categories</h1>
-
 <h3>■large_category</h3>
 <table>
-  <tbody>
-    <% @large_categories.each do |category| %>
-      <tr>
-        <td><%= category.large_category_code %></td>
-        <td><%= link_to category.large_category_name, edit_category_path(category) %></td>
-        <td><%= link_to category.large_category_name, "large_categories/#{category.large_category_code}/edit" %></td>
-      </tr>
-    <% end %>
-  </tbody>
+	<tbody>
+		<% @large_categories.each do |category| %>
+		<tr>
+			<td><%= category.large_category_code %></td>
+			<td><%= link_to category.large_category_name, edit_category_path(category) %></td>
+			<td><%= link_to category.large_category_name, "large_categories/#{category.large_category_code}/edit" %></td>
+		</tr>
+		<% end %>
+	</tbody>
 </table>
 
 <h3>■middle_category</h3>
 <table>
-  <tbody>
-    <% @middle_categories.each do |category| %>
-      <tr>
-        <td><%= category.middle_category_code %></td>
-        <td><%= category.large_category_code %></td>
-        <td><%= link_to category.middle_category_name, "middle_categories/#{category.middle_category_code}/edit" %></td>
-      </tr>
-    <% end %>
-  </tbody>
+	<tbody>
+		<% @middle_categories.each do |category| %>
+		<tr>
+			<td><%= category.middle_category_code %></td>
+			<td><%= category.large_category_code %></td>
+			<td><%= link_to category.middle_category_name, "middle_categories/#{category.middle_category_code}/edit" %></td>
+		</tr>
+		<% end %>
+	</tbody>
 </table>
 
 <h3>■small_category</h3>
 <table>
-  <tbody>
-    <% @small_categories.each do |category| %>
-      <tr>
-        <td><%= category.small_category_code %></td>
-        <td><%= category.middle_category_code %></td>
-        <td><%= category.large_category_code %></td>
-        <td><%= link_to category.small_category_name, "small_categories/#{category.small_category_code}/edit" %></td>
-      </tr>
-    <% end %>
-  </tbody>
+	<tbody>
+		<% @small_categories.each do |category| %>
+		<tr>
+			<td><%= category.small_category_code %></td>
+			<td><%= category.middle_category_code %></td>
+			<td><%= category.large_category_code %></td>
+			<td><%= link_to category.small_category_name, "small_categories/#{category.small_category_code}/edit" %></td>
+		</tr>
+		<% end %>
+	</tbody>
 </table>
