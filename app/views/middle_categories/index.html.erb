@@ -6,7 +6,7 @@
 <ul id="tree">
 	<% @middle_categories.each do |category_group| %>
 	<li>
-		<%= category_group[0] %>
+		<%= category_group[1][0].large_category.large_category_name %>
 		<ul>
 			<% category_group[1].each do |middle_category| %>
 			<li>

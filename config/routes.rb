@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
   resources :small_categories
   post 'small_categories/new(.:format)', to: 'small_categories#new'
+  post 'small_categories/:id/edit(.:format)', to: 'small_categories#edit'
+  patch 'small_categories/:id/edit(.:format)', to: 'small_categories#edit'
 
   resources :middle_categories
 

@@ -9,11 +9,11 @@ class MiddleCategory < ActiveRecord::Base
     includes(:large_category)
   }
   scope :belongs_to_select_category, ->(category) {
-    where("large_category_code = ?", category[:large_category_code])
+    includes(:large_category).where("large_category_code = ? or id = ?", category[:large_category_code], category[:large_category_code])
   }
 
   scope :category_tree, -> {
-    order(:large_category_code).order(:display_order)
+    includes(:large_category).order(:large_category_code).order(:display_order)
 }
 
 end

@@ -25,7 +25,7 @@ $(function() {
 
 $(function(){
     $('#small_category_large_category_code').change(function() {
-        $("form").attr('action', '/small_categories/new');
+        $("form").attr('action', location.pathname);
         $("form").submit();
     });
 });

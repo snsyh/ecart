@@ -12,20 +12,22 @@ class SmallCategoriesController < ApplicationController
   end
 
   # GET /small_categories/new
+  # POST /small_categories/new
   def new
-    if params[:small_category].blank?
-      @small_category = SmallCategory.new
-      @middle_categories = []
-    else
-      @req_category = params[:small_category]
-      @small_category = SmallCategory.new(small_category_params)
-      @middle_categories = MiddleCategory.belongs_to_select_category(params[:small_category])
-    end
+    @small_category = params[:small_category].blank? ? SmallCategory.new : SmallCategory.new(small_category_params)
+    @middle_categories = params[:small_category].blank? ? [] : MiddleCategory.belongs_to_select_category(@small_category)
   end
 
   # GET /small_categories/1/edit
   def edit
-    @middle_categories = MiddleCategory.belongs_to_select_category(@small_category)
+    @small_category = params[:small_category].blank? ? SmallCategory.find(params[:id]) : SmallCategory.new(small_category_params)
+    @request_category = params[:small_category]
+    
+    if @request_category.present? && (@request_category[:large_category_code] != @small_category.large_category)
+      @middle_categories = MiddleCategory.belongs_to_select_category(@request_category)
+    else
+      @middle_categories = MiddleCategory.belongs_to_select_category(@small_category)
+    end
   end
 
   # POST /small_categories
@@ -73,7 +75,9 @@ class SmallCategoriesController < ApplicationController
 
   # Use callbacks to share common setup or constraints between actions.
   def set_small_category
-    @small_category = SmallCategory.find(params[:id])
+    if params[:id].blank?
+      @small_category = SmallCategory.find(params[:id])
+    end
   end
 
   # Never trust parameters from the scary internet, only allow the white list through.
