@@ -13,15 +13,19 @@
 </div>
 <% end %>
 
-<% @category.each do |c|  %>
-<%=c.large_category_code%>
-<%=c.middle_category_code%>
-<%=c.small_category_code%>
-<% end %>
+<div class="field">
+	<%= label :large_category, :large_category %>
+	<%= collection_select(:large_category_code, :large_category_code, @large_categories, :large_category_code, :large_category_name) %>
+</div>
+
+<div class="field">
+	<%= label :middle_category, :middle_category %>
+	<%= collection_select(:middle_category_code, :middle_category_code, @middle_categories, :middle_category_code, :middle_category_name) %>
+</div>
 
 <div class="field">
 	<%= f.label :category %>
-	<%= f.collection_select(:small_category_code, SmallCategory.all, :id, :small_category_name, :include_blank => true) %>
+	<%= f.collection_select(:small_category_code, @small_categories, :small_category_code, :small_category_name, :include_blank => true) %>
 </div>
 
 <div class="field">

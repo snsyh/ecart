@@ -15,7 +15,9 @@ class ItemsController < ApplicationController
   # GET /items/new
   def new
     @item = Item.new
-    @category = Category.where("small_category_code = ?", 101010)
+    @large_categories = LargeCategory.all
+    @middle_categories = MiddleCategory.all
+    @small_categories = SmallCategory.all
   end
 
   # GET /items/1/edit

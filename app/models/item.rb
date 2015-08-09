@@ -11,7 +11,7 @@ class Item < ActiveRecord::Base
   belongs_to_active_hash :display_flg
   belongs_to_active_hash :available_flg
 
-  scope :front_search, -> {
+  scope :includes_master, -> {
     includes(:brand).includes(:maker).includes(:delivery_method).includes(:small_category)
   }
 
